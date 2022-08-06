@@ -1,0 +1,245 @@
+.libro-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+   
+}
+
+.container-libro-unico{
+   
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+
+}
+
+.libro-unico{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.libro-unico img{
+        width: 350px;
+        height: 450px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+}
+
+.libro-descripcion{
+
+  
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.libro-descripcion h2{
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+   
+
+    
+}
+
+.libro-descripcion p{
+    font-size: 17px;
+    margin: 0;
+    margin-top: 12px;
+}
+
+.libro-descripcion button{
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 42px;
+    background-color: red;
+    color: white;
+    font-size: 17px;
+    border: none;
+    
+}
+
+.libro-descripcion button:hover{
+    background-color: rgb(205, 13, 13);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+}
+
+.pelota{
+    width: 100px;
+    height: 100px;
+    background-color: lightslategray;
+    opacity: 0.2;
+    border-radius: 50%;
+   
+}
+
+.pelota-uno{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: -1;
+}
+
+.pelota-dos{
+    position: absolute;
+    bottom: 150px;
+    left: 500px;
+    z-index: -2;
+}
+
+.pelota-tres{
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    z-index: -3;
+
+}
+
+.section-comentario{
+   
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.section-comentario h2{
+    font-size: 30px;
+    font-weight: 900;
+    
+}
+
+.section-comentario form{
+   
+    width: 50%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 220px;
+   
+}
+
+.section-comentario label{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.section-comentario input{
+    width: 60%;
+    height: 30px;
+    margin: 0;
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.section-comentario textarea{
+    width: 60%;
+    height: 30px;
+    margin: 0;
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.section-comentario button{
+    width: 150px;
+    height: 50px;
+    margin: 0 ;
+    margin-top: 25px;
+    
+   
+    background-color: red;
+    color: white;
+    font-size: 17px;
+    border: none;
+
+    
+}
+
+.section-comentario button:hover{
+    background-color: rgb(205, 13, 13);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+}
+
+.container-comentarios{
+    width: 100%;
+    height: 100%;
+   
+}
+.container-comentarios h2{
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+    margin-top: 50px;
+    padding-left: 30px;
+    padding-top: 30px;
+    border-top: 1px solid black;
+    
+}
+
+
+.comentario-card{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 30px;
+    border-bottom: 1px solid black;
+    margin: 0 ;
+
+}
+
+
+
+.comentario-card p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.comentario-card button{
+    width: 150px;
+    height: 50px;
+    margin: 0 ;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: red;
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+}
