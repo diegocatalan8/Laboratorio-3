@@ -2,15 +2,18 @@ import { useEffect, useState } from "react";
 import "./Libro.css";
 
 export default  function Libro()  {
+    const [estado, setEstado] = useState(false);
     
 
-   
-    let comentarios = JSON.parse(localStorage.getItem("comentario")) ;
+   //Con Comentarios Guardamos 
+    var comentarios = JSON.parse(localStorage.getItem("comentarios")) ;
+    
     
 
+    //Si comentarios es null, lo inicializamos como array vacio y lo metemos en el localStorage
     if(comentarios === null || comentarios === undefined || comentarios.length === 0){
         comentarios = [];
-        localStorage.setItem("comentario", JSON.stringify(comentarios));
+        localStorage.setItem("comentarios", JSON.stringify(comentarios));
     }
     
     
@@ -30,22 +33,46 @@ export default  function Libro()  {
         
         comentarios.push(form);
 
-        console.log(comentarios);
-    
         
     
-        localStorage.setItem("comentario", JSON.stringify(comentarios));
+        localStorage.setItem("comentarios", JSON.stringify(comentarios));
     }
    
+   
+    
+
+
+    function eliminar(comentario){
+       
+       
+        comentarios.filter(item => {
+            if(item.email === comentario.email){
+                comentarios.splice(comentarios.indexOf(item), 1);
+                localStorage.setItem("comentarios", JSON.stringify(comentarios));
+                console.log(comentarios);
+            }
+                
+                
+        });
+        setEstado(true);
+
+        document.location.reload(estado);
+      
+       
+    }
+
+   useEffect(() => {
+    setEstado(false);
+    
+   }, [comentarios]);
+    
+
+    
+
+    //Con esta Obtenemos los datos y los listamos
+    var comentario = JSON.parse(localStorage.getItem("comentarios")) ;
+   
     const libro = JSON.parse(localStorage.getItem("libro"));
-    const comentario = JSON.parse(localStorage.getItem("comentario"));
-    
-
-    console.log(comentario);
-
-    
-
-    
 
     
 
@@ -96,10 +123,10 @@ export default  function Libro()  {
 
                 return(
                     <div className="comentario-card">
-                        <p>{comentario.nombre}</p>
-                        <p>{comentario.email}</p>
-                        <p>{comentario.comentario}</p>
-                        <button type="button">ELIMINAR</button>
+                        <p id="name">{comentario.nombre}</p>
+                        <p id="email">{comentario.email}</p>
+                        <p id="comentario">{comentario.comentario}</p>
+                        <button type="button" onClick={()=>{eliminar(comentario)}}>ELIMINAR</button>
                     </div> 
                 )
             })}
